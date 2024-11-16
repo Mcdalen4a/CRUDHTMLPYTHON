@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2 class="mb-4">Editar Elemento</h2>
+    <form method="POST" enctype="multipart/form-data" class="card p-4 shadow-sm">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" name="name" id="name" class="form-control" value="{{ item.name }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Descripción</label>
+            <textarea name="description" id="description" class="form-control" rows="3" required>{{ item.description }}</textarea>
+        </div>
+        <div class="mb-3">
+            <label for="current-image" class="form-label">Imagen actual</label><br>
+            {% if item.image %}
+                <img src="{{ url_for('uploaded_file', filename=item.image) }}" alt="Imagen de {{ item.name }}" width="150" class="mb-2">
+            {% else %}
+                <p>No hay imagen cargada.</p>
+            {% endif %}
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Cargar nueva imagen (opcional)</label>
+            <input type="file" name="image" id="image" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Actualizar</button>
+        <a href="/" class="btn btn-secondary">Cancelar</a>
+    </form>
+{% endblock %}

@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Magdalena",
+        "description": "Programadora",
+        "image": "uploads\\aa.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "Lucho",
+        "description": "Programador",
+        "image": "uploads\\dora.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Lautaro",
+        "description": "Programador",
+        "image": "uploads\\a.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "Keren",
+        "description": "Programadora",
+        "image": "uploads\\wow.jpeg"
+    }
+]
